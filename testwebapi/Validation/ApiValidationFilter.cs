@@ -27,7 +27,7 @@ namespace testwebapi.Validation
                 {
                     if (item.Key == "apiKey")
                     {
-                        if (item.Value.ToString().ToLower().Trim() != "??92-road-DRAW-settle-99??")
+                        if (item.Value.ToString().Trim() != "??92-road-DRAW-settle-99??")
                         {
                             context.Result = new UnauthorizedResult();
                         }

@@ -20,16 +20,23 @@ namespace testwebapi.DAL
             ResponseJSON response = new ResponseJSON();
             try
             {
-                
-                    // Get record and update
-                var guid = _testContext.Guid.Find(createrequest.guid);
-                if (guid != null)
+
+                // Get record and update
+                var uniqueid = await _testContext.Guid
+                 .Where(p => p.UniqueId == createrequest.guid)
+                 .FirstOrDefaultAsync();
+                if (uniqueid != null)
                 {
+
                     if (!string.IsNullOrWhiteSpace(createrequest.expire))
                     {
-                        guid.Expires = createrequest.expire;
-                        await _testContext.SaveChangesAsync();
+                        uniqueid.Expires = createrequest.expire;
                     }
+                    if (!string.IsNullOrWhiteSpace(createrequest.user))
+                    {
+                        uniqueid.User = createrequest.user;
+                    }
+                    await _testContext.SaveChangesAsync();
                     // Query the record back
                     var list = await _testContext.Guid
                                       .Where(p => p.UniqueId == createrequest.guid)
@@ -74,9 +81,17 @@ namespace testwebapi.DAL
 
         public async Task DeleteAsync(string id)
         {
-            var uniqueid = await _testContext.Guid.FindAsync(id);
-            _testContext.Guid.Remove(uniqueid);
-            await _testContext.SaveChangesAsync();
+            if (!string.IsNullOrWhiteSpace(id))
+            {
+                var uniqueid = await _testContext.Guid
+                 .Where(p => p.UniqueId == id)
+                 .FirstOrDefaultAsync();
+                if (uniqueid != null)
+                {
+                    _testContext.Guid.Remove(uniqueid);
+                    await _testContext.SaveChangesAsync();
+                }
+            }
         }
 
         public async Task<ResponseJSON> ReadAsync(string id)

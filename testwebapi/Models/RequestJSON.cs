@@ -10,7 +10,7 @@ namespace testwebapi.Models
     {
        
         public string expire { get; set; }
-        //[Required]
+        [Required]
         public string user { get; set; }
         public string guid { get; set; }
     }

@@ -37,7 +37,6 @@ namespace testwebapi.Controllers
         [HttpPost("{id?}")] // id is an optional parameter
         public async Task<IActionResult> Post([FromBody]RequestJSON requestJSON)
         {
-
             string expire = string.Empty;
             string guid = string.Empty;
 
