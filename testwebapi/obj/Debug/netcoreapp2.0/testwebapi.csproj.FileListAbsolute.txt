@@ -3,9 +3,9 @@ c:\users\rjonnala\source\repos\testwebapi\testwebapi\bin\Debug\netcoreapp2.0\tes
 c:\users\rjonnala\source\repos\testwebapi\testwebapi\bin\Debug\netcoreapp2.0\testwebapi.runtimeconfig.dev.json
 c:\users\rjonnala\source\repos\testwebapi\testwebapi\bin\Debug\netcoreapp2.0\testwebapi.dll
 c:\users\rjonnala\source\repos\testwebapi\testwebapi\bin\Debug\netcoreapp2.0\testwebapi.pdb
-c:\users\rjonnala\source\repos\testwebapi\testwebapi\obj\Debug\netcoreapp2.0\testwebapi.csprojResolveAssemblyReference.cache
 c:\users\rjonnala\source\repos\testwebapi\testwebapi\obj\Debug\netcoreapp2.0\testwebapi.csproj.CoreCompileInputs.cache
 c:\users\rjonnala\source\repos\testwebapi\testwebapi\obj\Debug\netcoreapp2.0\testwebapi.AssemblyInfoInputs.cache
 c:\users\rjonnala\source\repos\testwebapi\testwebapi\obj\Debug\netcoreapp2.0\testwebapi.AssemblyInfo.cs
 c:\users\rjonnala\source\repos\testwebapi\testwebapi\obj\Debug\netcoreapp2.0\testwebapi.dll
 c:\users\rjonnala\source\repos\testwebapi\testwebapi\obj\Debug\netcoreapp2.0\testwebapi.pdb
+C:\Users\rjonnala\source\repos\testwebapi\testwebapi\obj\Debug\netcoreapp2.0\testwebapi.csprojAssemblyReference.cache

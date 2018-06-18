@@ -23,7 +23,7 @@ namespace testwebapi.DAL
 
                 // Get record and update
                 var uniqueid = await _testContext.Guid
-                 .Where(p => p.UniqueId == createrequest.guid)
+                 .Where(p => p.UniqueId == createrequest.guid && p.User == createrequest.user)
                  .FirstOrDefaultAsync();
                 if (uniqueid != null)
                 {
